@@ -1,7 +1,8 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SectionContainer from './components/layout/SectionContainer';
-import ProductCard from './components/ProductCard';
+import ProductCard from './components/ui/ProductCard';
+import BlogSection from './components/BlogSection';
 
 const productsData = [
   {
@@ -32,7 +33,7 @@ function App() {
       <main>
         <Hero />
 
-        <section className="py-20">
+        <section className="py-20 bg-white">
           <SectionContainer>
             <div className="flex justify-between items-end mb-10">
               <h2 className="text-headline-h2 text-black">Our Products</h2>
@@ -54,6 +55,8 @@ function App() {
             </div>
           </SectionContainer>
         </section>
+
+        <BlogSection />
 
       </main>
     </div>
