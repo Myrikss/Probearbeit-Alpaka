@@ -1,55 +1,37 @@
 interface ProductCardProps {
   title: string;
   description: string;
-  bgColorClass: string;
   image: string;
+  bgColorClass: string;
 }
 
-const ProductCard = ({ title, description, bgColorClass, image }: ProductCardProps) => {
+const ProductCard = ({ title, description, image, bgColorClass }: ProductCardProps) => {
   return (
-    <div className={`${bgColorClass} rounded-[20px] p-8 flex flex-col h-full text-white transition-transform hover:scale-[1.02] duration-300 group`}>
-      <div className="flex-1 flex items-center justify-center mb-8">
+    <div className={`rounded-3xl overflow-hidden ${bgColorClass} flex flex-col items-center justify-between aspect-[3/4] md:aspect-auto md:min-h-[500px]`}>
+      
+      <div className="flex-grow flex items-center justify-center p-8 md:p-12 md:pb-6">
         <img 
           src={image} 
           alt={title} 
-          className="max-w-full h-auto object-contain"
+          className="max-h-[70%] md:max-h-[220px] object-contain"
         />
       </div>
 
-      <div className="mt-auto">
-        <h3 className="text-headline-h3 mb-3">{title}</h3>
-        <p className="text-body opacity-90 line-clamp-3 mb-6">
+      <div className="hidden md:block w-full bg-white/5 p-8 pt-6">
+        <h3 className="text-xl font-semibold text-white mb-3">
+          {title}
+        </h3>
+        <p className="text-sm text-white/80 leading-relaxed mb-6 line-clamp-3">
           {description}
         </p>
-
-        <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center transition-colors hover:bg-brand-green-light">
-          <svg 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-[#4B4B4B]"
-          >
-            <path 
-              d="M2 12H22" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeMiterlimit="10" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
-            <path 
-              d="M15 5L22 12L15 19" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeMiterlimit="10" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            />
+        
+        <button className="w-12 h-12 bg-white rounded-full flex items-center justify-center group hover:bg-brand-green transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-black group-hover:text-white transition-colors">
+            <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
       </div>
+
     </div>
   );
 };
