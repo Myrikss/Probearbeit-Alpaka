@@ -1,1 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  /* Neutrals */
+  --color-black: #212429;
+  --color-gray-900: #4B4B4B;
+  --color-gray-700: #707070;
+  --color-gray-500: #9C9C9C;
+  --color-gray-70: #F2F2F2;
+  --color-white: #ffffff;
+
+  /* Main Colors */
+  --color-brand-green: #00915A;
+  --color-brand-green-light: #b0cb52;
+  --color-brand-blue: #0096D2;
+  --background-image-gradient-main: linear-gradient(to right, var(--color-brand-green-light), var(--color-brand-green), var(--color-brand-blue));
+
+  /* Product A (Yellow) */
+  --color-prod-a-dark: #FBB900;
+  --color-prod-a-light: #FFD800;
+  --background-image-gradient-a: linear-gradient(to bottom right, var(--color-prod-a-dark), var(--color-prod-a-light));
+
+  /* Product B (Red/Blue) */
+  --color-prod-b-red-dark: #E30011;
+  --color-prod-b-red-light: #EA5906;
+  --color-prod-b-blue-dark: #0072CF;
+  --color-prod-b-blue-light: #289AF7;
+  --background-image-gradient-b: linear-gradient(to bottom right, var(--color-prod-b-blue-dark), var(--color-prod-b-blue-light));
+
+  /* Product C (Green/Yellow & Purple) */
+  --color-prod-c-green: #80ba27;
+  --color-prod-c-yellow: #f7ec69;
+  --color-prod-c-purple: #5A4279;
+  --color-prod-c-purple-light: #CEC2D9;
+  --background-image-gradient-c-green: linear-gradient(to bottom right, var(--color-prod-c-green), var(--color-prod-c-yellow));
+  --background-image-gradient-c-purple: linear-gradient(to bottom right, var(--color-prod-c-purple), var(--color-prod-c-purple-light));
+
+  /* Product D (Orange/Teal) */
+  --color-prod-d-orange: #EF7500;
+  --color-prod-d-orange-light: #FED468;
+  --color-prod-d-green: #00a181;
+  --background-image-gradient-d: linear-gradient(to bottom right, var(--color-prod-d-orange), var(--color-prod-d-orange-light));
+
+  /* Product E (Green) */
+  --color-prod-e-dark: #009E3C;
+  --color-prod-e-light: #95C11C;
+  --background-image-gradient-e: linear-gradient(to bottom right, var(--color-prod-e-dark), var(--color-prod-e-light));
+
+  /* Product F (Cyan/Blue) */
+  --color-prod-f-dark: #009CC4;
+  --color-prod-f-light: #1DB9DE;
+  --background-image-gradient-f: linear-gradient(to bottom right, var(--color-prod-f-dark), var(--color-prod-f-light));
+
+  /* Product G (Navy/Red) */
+  --color-prod-g-blue: #004587;
+  --color-prod-g-blue-light: #5897BC;
+  --color-prod-g-red: #CD1719;
+  --background-image-gradient-g: linear-gradient(to bottom right, var(--color-prod-g-blue), var(--color-prod-g-blue-light));
+
+  /* Backgrounds & Text */
+  --color-body-bg: var(--color-white);
+  --color-body-text: var(--color-black);
+
+  /* Font Family */
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+
+  /* --- Mobile Typography (Default) --- */
+  --text-headline-h1: 48px;
+  --text-headline-h1--line-height: 56px;
+  --text-headline-h1--font-weight: 700;
+
+  /* --- Desktop Typography Styles --- */
+  /* Wir definieren die Desktop-Werte als Variablen, die wir unten umschalten */
+  --text-headline-h2: 32px;
+  --text-headline-h2--line-height: 40px;
+  --text-headline-h2--font-weight: 400;
+
+  --text-headline-h3: 20px;
+  --text-headline-h3--line-height: 24px;
+  --text-headline-h3--font-weight: 700;
+
+  --text-headline-h4: 18px;
+  --text-headline-h4--line-height: 24px;
+  --text-headline-h4--font-weight: 700;
+
+  --text-intro: 20px;
+  --text-intro--line-height: 32px;
+  --text-intro--font-weight: 300;
+
+  --text-body: 15px;
+  --text-body--line-height: 24px;
+  --text-body--font-weight: 400;
+
+  --text-link: 15px;
+  --text-link--line-height: 24px;
+  --text-link--font-weight: 700;
+  /* text-decoration: underline wird direkt als Utility-Klasse 'underline' genutzt */
+
+  --text-button: 15px;
+  --text-button--line-height: 24px;
+  --text-button--font-weight: 700;
+
+  --text-overline: 12px;
+  --text-overline--line-height: 16px;
+  --text-overline--font-weight: 400;
+  /* text-transform: uppercase wird als Utility 'uppercase' genutzt */
+
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+  --text-caption--font-weight: 400;
+
+  --text-caption-bold: 12px;
+  --text-caption-bold--line-height: 16px;
+  --text-caption-bold--font-weight: 700;
+}
+
+/* --- Responsive Desktop Overrides (ab 1024px) --- */
+@media (min-width: 1024px) {
+  @theme {
+    --text-headline-h1: 64px;
+    --text-headline-h1--line-height: 72px;
+  }
+}
