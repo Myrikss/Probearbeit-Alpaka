@@ -3,6 +3,8 @@ import Hero from './components/Hero';
 import SectionContainer from './components/layout/SectionContainer';
 import ProductCard from './components/ui/ProductCard';
 import BlogSection from './components/BlogSection';
+import HighlightCard from './components/ui/HighlightCard';
+import Footer from './components/Footer';
 
 const productsData = [
   {
@@ -58,7 +60,10 @@ function App() {
 
         <BlogSection />
 
+        <HighlightCard />
+
       </main>
+      <Footer />
     </div>
   );
 }
