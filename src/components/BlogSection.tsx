@@ -48,16 +48,18 @@ const BlogSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-start flex-wrap gap-3 mb-10">
-          {['Show All', 'City', 'Forest', 'Water'].map((tag, index) => (
-            <button 
-              key={tag}
-              className={`px-5 py-2 rounded-full border text-[13px] font-bold transition-all
-                ${index === 2 ? 'bg-black text-white border-black' : 'bg-gray-50 border-transparent text-gray-600'}`}
-            >
-              {tag}
-            </button>
-          ))}
+        <div className="mb-10 -mx-4 px-4 md:mx-0 md:px-0">
+          <div className="flex justify-start gap-3 overflow-x-auto no-scrollbar pb-2 md:pb-0 md:flex-wrap">
+            {['Show All', 'City', 'Forest', 'Water'].map((tag, index) => (
+              <button 
+                key={tag}
+                className={`flex-shrink-0 px-5 py-2 rounded-full border text-[13px] font-bold transition-all
+                  ${index === 2 ? 'bg-black text-white border-black' : 'bg-gray-50 border-transparent text-gray-600 hover:border-gray-300'}`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </SectionContainer>
 
